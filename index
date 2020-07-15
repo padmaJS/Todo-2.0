@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TODO app</title>
+
+</head>
+<body>
+  <h2>ToDo List</h2> 
+  <input placeholder="Type Here" id="item">
+  <button onclick="addItem()">Add</button>
+  <div>
+    <ol id="itemList">
+      
+    </ol>
+  </div>
+  <script type="text/javascript">
+    function addItem(){
+    var item = document.getElementById("item");
+    var newItem = document.createElement('li');
+    newItem.textContent = item.value;
+    var list = document.getElementById("itemList");
+    list.appendChild(newItem);
+    var doneButton = document.createElement('button');
+    doneButton.textContent = "Done";
+    list.appendChild(doneButton)
+  }
+  function removeItem(){
+    
+  }
+  </script>
+</body>
+</html>
