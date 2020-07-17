@@ -1,4 +1,4 @@
-document.getElementById("addItem").onclick = function (){
+document.getElementById("addItem").onclick = () => {
       var todoInput = document.getElementById("todo-input");
       var itemList = document.getElementById("item-list");
       var newItem = document.createElement('li');
@@ -6,7 +6,7 @@ document.getElementById("addItem").onclick = function (){
       newItem.textContent = todoInput.value;
       itemList.appendChild(newItem);
       doneButton.className = "done";
-      doneButton.onclick = function(e) {
+      doneButton.onclick = (e) => {
         e.currentTarget.parentNode.remove();
       };
       doneButton.textContent = "Done";
